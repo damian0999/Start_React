@@ -5,6 +5,7 @@ class App extends React.Component{
   constructor(){
     super();
     this.state = { txt: '' }
+    this.update = this.update.bind(this)
   }
   update(e){
     this.setState({
@@ -12,15 +13,23 @@ class App extends React.Component{
     });
   }
   render(){
-    return(
-      <div>
-        <input type='text' onChange={this.update.bind(this)} />
-        <h1> {this.state.txt} </h1>
-        <p> {this.state.txt.length} </p>
-      </div>
+    return (
+      <Wiget txt = {this.state.txt} count = {this.state.txt.length}
+      update = {this.update} />
     );
   }
 }
+
+const Wiget = (props) => {
+  return(
+    <div>
+      <input type='text' onChange={props.update} />
+      <h1> {props.txt} </h1>
+      <p> {props.count} </p>
+    </div>
+  );
+}
+
 
 // App.propTypes = {
 //   txt: React.PropTypes.string,
