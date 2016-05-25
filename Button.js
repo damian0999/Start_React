@@ -14,6 +14,7 @@ class Wrapper extends React.Component {
   render(){
     return(
       <div>
+        <h3>Interval button (Component Mount)</h3>
         <button onClick={this.mount.bind(this)}>Mount</button>
         <button onClick={this.unmount.bind(this)}>Unmount</button>
         <div id='wrapping'></div>

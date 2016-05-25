@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import Wrapper from './Button'
+import Increase from './Increase'
 
 // class has state
 class App extends React.Component{
@@ -33,7 +34,8 @@ class App extends React.Component{
       <div>
         <Wiget txt = {this.state.txt} count = {this.state.txt.length}
         updateTxt = {this.updateTxt} />
-      <hr />
+        <hr />
+        <h3>RGB Slider</h3>
         <Slider ref='red' update={this.update}/>
         {this.state.red}
         <br />
@@ -45,6 +47,8 @@ class App extends React.Component{
         <br />
         <hr />
         <Wrapper />
+        <hr />
+        <Increase />
       </div>
     );
   }
