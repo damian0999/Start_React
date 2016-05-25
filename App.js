@@ -42,6 +42,8 @@ class App extends React.Component{
         <Slider ref='blue' update={this.update}/>
         {this.state.blue}
         <br />
+        <hr />
+        <Button> React </Button>
       </div>
     );
   }
@@ -52,6 +54,12 @@ class Slider extends React.Component{
     return(
       <input type='range' min='0' max='255' onChange={this.props.update} />
     );
+  }
+}
+
+class Button extends React.Component{
+  render(){
+    return <button>{this.props.children}</button>
   }
 }
 
