@@ -31,13 +31,15 @@ class Button extends React.Component{
     this.update = this.update.bind(this)
   }
   componentWillMount() {
-    console.log('mounting');
+    this.setState({
+      multiply: 2
+    });
   }
   componentDidMount() {
-    console.log('mounted');
+    this.int = setInterval(this.update, 500);
   }
   componentWillUnmount() {
-    console.log('bye');
+    clearInterval(this.int)
   }
   update(){
     this.setState({
@@ -47,7 +49,7 @@ class Button extends React.Component{
   render(){
     console.log('rendering');
     return(
-      <button onClick={this.update}>{this.state.val}</button>
+      <button onClick={this.update}>{this.state.val * this.state.multiply}</button>
     );
   }
 }
