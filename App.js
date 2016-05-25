@@ -30,7 +30,7 @@ class App extends React.Component{
     });
   }
   render(){
-    return (
+    return(
       <div>
         <Wiget txt = {this.state.txt} count = {this.state.txt.length}
         updateTxt = {this.updateTxt} />
