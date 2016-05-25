@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import Wrapper from './Button'
 
 // class has state
 class App extends React.Component{
@@ -9,7 +10,7 @@ class App extends React.Component{
       txt: '',
       red: 0,
       green: 0,
-      blue: 0
+      blue: 0,
      }
     this.update = this.update.bind(this)
     this.updateTxt = this.updateTxt.bind(this)
@@ -19,7 +20,7 @@ class App extends React.Component{
       //references
       red: ReactDOM.findDOMNode(this.refs.red).value,
       green: ReactDOM.findDOMNode(this.refs.green).value,
-      blue: ReactDOM.findDOMNode(this.refs.blue).value
+      blue: ReactDOM.findDOMNode(this.refs.blue).value,
     });
   }
   updateTxt(e){
@@ -43,7 +44,7 @@ class App extends React.Component{
         {this.state.blue}
         <br />
         <hr />
-        <Button> React </Button>
+        <Wrapper />
       </div>
     );
   }
@@ -54,12 +55,6 @@ class Slider extends React.Component{
     return(
       <input type='range' min='0' max='255' onChange={this.props.update} />
     );
-  }
-}
-
-class Button extends React.Component{
-  render(){
-    return <button>{this.props.children}</button>
   }
 }
 
