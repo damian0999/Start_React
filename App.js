@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import Wrapper from './Button'
 import Increase from './Increase'
+import InputUpdate from './InputUpdate'
 
 // class has state
 class App extends React.Component{
@@ -49,6 +50,8 @@ class App extends React.Component{
         <Wrapper />
         <hr />
         <Increase />
+        <hr />
+        <InputUpdate />
       </div>
     );
   }
