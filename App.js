@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom'
 import Wrapper from './Button'
 import Increase from './Increase'
 import InputUpdate from './InputUpdate'
+import ListGenerate from './ListGenerate'
 
 // class has state
 class App extends React.Component{
@@ -52,6 +53,8 @@ class App extends React.Component{
         <Increase />
         <hr />
         <InputUpdate />
+        <hr />
+        <ListGenerate />
       </div>
     );
   }
